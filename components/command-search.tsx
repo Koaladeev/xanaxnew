@@ -107,11 +107,7 @@ export const CommandSearch = () => {
     };
   };
 
-  const pathName = usePathname();
-  useEffect(() => {
-    const searches = getRecentSearchesFromLocalStorage();
-    setRecentSearches(searches);
-  }, []);
+
 
   useEffect(() => {
     const debouncedSearch = debounce(async (text: string) => {
